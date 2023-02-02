@@ -1,0 +1,7 @@
+# Project exclude paths
+/blog-common/blog-common-base/target/
+/blog-consumer/blog-consumer-article/target/
+/blog-consumer/blog-consumer-manage/target/
+/blog-gateway/target/
+/blog-producer/blog-producer-article/target/
+/blog-producer/blog-producer-manage/target/

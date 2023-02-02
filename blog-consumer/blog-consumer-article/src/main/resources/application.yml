@@ -1,0 +1,23 @@
+#spring:
+#  application:
+#    name: blog-consumer-article
+#  cloud:
+#    #nacos帮助文档: https://nacos.io/zh-cn/docs/concepts.html
+#    nacos:
+#      discovery:
+#        #nacos认证信息
+#        username: nacos
+#        password: nacos
+#        #nacos服务发现与注册配置，其中子属性 server-addr 指定 Nacos 服务器主机和端口
+#        server-addr: 127.0.0.1:8848
+#        #注册到nacos的指定namespace，默认为 public
+#        namespace: public
+#    #流量控制组件
+#    sentinel:
+#      eager: true
+#      transport:
+#        dashboard: 127.0.0.1:8080
+## 应用服务 WEB 访问端口
+#server:
+#  port: 8030
+# TODO 在之后实际的开发中需要对sentinel进行配置,还有统一的seata事务配置,zipkin的链路跟踪组件
