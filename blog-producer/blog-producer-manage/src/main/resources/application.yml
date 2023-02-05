@@ -1,28 +1,28 @@
-## 应用服务 WEB 访问端口
-#server:
-#  port: 8060
-#spring:
-#  application:
-#    name: blog-producer-manage
-#  cloud:
-#    #nacos帮助文档: https://nacos.io/zh-cn/docs/concepts.html
-#    nacos:
-#      discovery:
-#        #nacos认证信息
-#        username: nacos
-#        password: nacos
-#        #nacos服务发现与注册配置，其中子属性 server-addr 指定 Nacos 服务器主机和端口
-#        server-addr: 127.0.0.1:8848
-#        #注册到nacos的指定namespace，默认为 public
-#        namespace: public
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/cloud-blog-manage?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
-#    username: root
-#    password: lkx123456
-#mybatis-plus:
-#  configuration:
-#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-#  mapper-locations: classpath:mapper/*.xml
-#  type-aliases-package: com.cloud.blog.common.entity.manage
-#
+# 应用服务 WEB 访问端口
+server:
+  port: 8060
+spring:
+  application:
+    name: blog-producer-manage
+  cloud:
+    #nacos帮助文档: https://nacos.io/zh-cn/docs/concepts.html
+    nacos:
+      discovery:
+        #nacos认证信息
+        username: nacos
+        password: nacos
+        #nacos服务发现与注册配置，其中子属性 server-addr 指定 Nacos 服务器主机和端口
+        server-addr: 192.168.1.20:8848
+        #注册到nacos的指定namespace，默认为 public
+        namespace: public
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/cloud-blog-manage?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: lkx123456
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.cloud.blog.common.mybatis.entity.manage
+
