@@ -1,4 +1,4 @@
-package com.cloud.blog.common.base.entity;
+package com.cloud.blog.common.mybatis.entity.manage;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  * <p>
- * 角色
+ * 用户表
  * </p>
  *
  * @author lkx
@@ -21,34 +21,70 @@ import java.util.Date;
 @Getter
 @Setter
 @Accessors(chain = true)
-@TableName("sys_role")
-public class SysRole implements Serializable {
+@TableName("sys_user")
+public class SysUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 角色id
+     * 会员id
      */
     @TableId("id")
     private Long id;
 
     /**
-     * 角色名称
+     * 用户名
      */
-    @TableField("role_name")
-    private String roleName;
+    @TableField("username")
+    private String username;
 
     /**
-     * 角色编码
+     * 密码
      */
-    @TableField("role_code")
-    private String roleCode;
+    @TableField("password")
+    private String password;
+
+    /**
+     * 姓名
+     */
+    @TableField("name")
+    private String name;
+
+    /**
+     * 手机
+     */
+    @TableField("phone")
+    private String phone;
+
+    /**
+     * 头像地址
+     */
+    @TableField("head_url")
+    private String headUrl;
+
+    /**
+     * 部门id
+     */
+    @TableField("dept_id")
+    private Long deptId;
+
+    /**
+     * 岗位id
+     */
+    @TableField("post_id")
+    private Long postId;
 
     /**
      * 描述
      */
     @TableField("description")
     private String description;
+
+    /**
+     * 状态（1：正常 0：停用）
+     */
+    @TableField("status")
+    private Boolean status;
 
     /**
      * 创建时间

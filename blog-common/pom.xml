@@ -12,6 +12,7 @@
     <artifactId>blog-common</artifactId>
     <packaging>pom</packaging>
     <modules>
+        <module>blog-common-mybatis</module>
         <module>blog-common-base</module>
     </modules>
 

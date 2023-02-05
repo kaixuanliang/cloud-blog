@@ -1,4 +1,4 @@
-package com.cloud.blog.common.base.entity;
+package com.cloud.blog.common.mybatis.entity.manage;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -12,53 +12,89 @@ import java.util.Date;
 
 /**
  * <p>
- * 岗位信息表
+ * 菜单表
  * </p>
  *
  * @author lkx
- * @since 2023-02-02 16:58:57
+ * @since 2023-02-02 16:58:56
  */
 @Getter
 @Setter
 @Accessors(chain = true)
-@TableName("sys_post")
-public class SysPost implements Serializable {
+@TableName("sys_menu")
+public class SysMenu implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 岗位ID
+     * 编号
      */
     @TableId("id")
     private Long id;
 
     /**
-     * 岗位编码
+     * 所属上级
      */
-    @TableField("post_code")
-    private String postCode;
+    @TableField("parent_id")
+    private Long parentId;
 
     /**
-     * 岗位名称
+     * 名称
      */
     @TableField("name")
     private String name;
 
     /**
-     * 描述
+     * 类型(0:目录,1:菜单,2:按钮)
      */
-    @TableField("description")
-    private String description;
+    @TableField("type")
+    private Integer type;
 
     /**
-     * 状态（1正常 0停用）
+     * 路由地址
+     */
+    @TableField("path")
+    private String path;
+
+    /**
+     * 组件路径
+     */
+    @TableField("component")
+    private String component;
+
+    /**
+     * 权限标识
+     */
+    @TableField("perms")
+    private String perms;
+
+    /**
+     * 图标
+     */
+    @TableField("icon")
+    private String icon;
+
+    /**
+     * 排序
+     */
+    @TableField("sort_value")
+    private Integer sortValue;
+
+    /**
+     * 状态(0:禁止,1:正常)
      */
     @TableField("status")
     private Boolean status;
 
+    /**
+     * 创建时间
+     */
     @TableField("create_time")
     private Date createTime;
 
+    /**
+     * 更新时间
+     */
     @TableField("update_time")
     private Date updateTime;
 

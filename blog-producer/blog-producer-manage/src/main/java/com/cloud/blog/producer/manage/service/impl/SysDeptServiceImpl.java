@@ -1,6 +1,6 @@
 package com.cloud.blog.producer.manage.service.impl;
 
-import com.cloud.blog.common.base.entity.SysDept;
+import com.cloud.blog.common.mybatis.entity.manage.SysDept;
 import com.cloud.blog.producer.manage.mapper.SysDeptMapper;
 import com.cloud.blog.producer.manage.service.SysDeptService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

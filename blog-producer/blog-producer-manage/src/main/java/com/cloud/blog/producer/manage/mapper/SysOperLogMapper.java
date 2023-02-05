@@ -1,7 +1,7 @@
 package com.cloud.blog.producer.manage.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.cloud.blog.common.base.entity.SysOperLog;
+import com.cloud.blog.common.mybatis.entity.manage.SysOperLog;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

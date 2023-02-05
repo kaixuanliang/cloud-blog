@@ -1,4 +1,4 @@
-package com.cloud.blog.common.base.entity;
+package com.cloud.blog.common.mybatis.entity.manage;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  * <p>
- * 菜单表
+ * 组织机构
  * </p>
  *
  * @author lkx
@@ -21,58 +21,31 @@ import java.util.Date;
 @Getter
 @Setter
 @Accessors(chain = true)
-@TableName("sys_menu")
-public class SysMenu implements Serializable {
+@TableName("sys_dept")
+public class SysDept implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 编号
-     */
     @TableId("id")
     private Long id;
 
     /**
-     * 所属上级
-     */
-    @TableField("parent_id")
-    private Long parentId;
-
-    /**
-     * 名称
+     * 部门名称
      */
     @TableField("name")
     private String name;
 
     /**
-     * 类型(0:目录,1:菜单,2:按钮)
+     * 上级部门id
      */
-    @TableField("type")
-    private Integer type;
+    @TableField("parent_id")
+    private Long parentId;
 
     /**
-     * 路由地址
+     * 树结构
      */
-    @TableField("path")
-    private String path;
-
-    /**
-     * 组件路径
-     */
-    @TableField("component")
-    private String component;
-
-    /**
-     * 权限标识
-     */
-    @TableField("perms")
-    private String perms;
-
-    /**
-     * 图标
-     */
-    @TableField("icon")
-    private String icon;
+    @TableField("tree_path")
+    private String treePath;
 
     /**
      * 排序
@@ -81,20 +54,26 @@ public class SysMenu implements Serializable {
     private Integer sortValue;
 
     /**
-     * 状态(0:禁止,1:正常)
+     * 负责人
+     */
+    @TableField("leader")
+    private String leader;
+
+    /**
+     * 电话
+     */
+    @TableField("phone")
+    private String phone;
+
+    /**
+     * 状态（1正常 0停用）
      */
     @TableField("status")
     private Boolean status;
 
-    /**
-     * 创建时间
-     */
     @TableField("create_time")
     private Date createTime;
 
-    /**
-     * 更新时间
-     */
     @TableField("update_time")
     private Date updateTime;
 

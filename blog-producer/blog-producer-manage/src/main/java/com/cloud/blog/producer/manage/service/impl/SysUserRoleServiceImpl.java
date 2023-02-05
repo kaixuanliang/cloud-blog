@@ -1,6 +1,6 @@
 package com.cloud.blog.producer.manage.service.impl;
 
-import com.cloud.blog.common.base.entity.SysUserRole;
+import com.cloud.blog.common.mybatis.entity.manage.SysUserRole;
 import com.cloud.blog.producer.manage.mapper.SysUserRoleMapper;
 import com.cloud.blog.producer.manage.service.SysUserRoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

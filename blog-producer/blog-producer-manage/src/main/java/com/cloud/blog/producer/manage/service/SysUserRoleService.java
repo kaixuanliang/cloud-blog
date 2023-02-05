@@ -1,7 +1,7 @@
 package com.cloud.blog.producer.manage.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.cloud.blog.common.base.entity.SysUserRole;
+import com.cloud.blog.common.mybatis.entity.manage.SysUserRole;
 
 /**
  * <p>

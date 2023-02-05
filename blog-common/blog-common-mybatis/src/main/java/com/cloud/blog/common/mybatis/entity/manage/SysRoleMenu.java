@@ -1,4 +1,4 @@
-package com.cloud.blog.common.base.entity;
+package com.cloud.blog.common.mybatis.entity.manage;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;

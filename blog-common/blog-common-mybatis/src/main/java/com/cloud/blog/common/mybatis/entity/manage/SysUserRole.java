@@ -1,4 +1,4 @@
-package com.cloud.blog.common.base.entity;
+package com.cloud.blog.common.mybatis.entity.manage;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -12,59 +12,47 @@ import java.util.Date;
 
 /**
  * <p>
- * 系统访问记录
+ * 用户角色
  * </p>
  *
  * @author lkx
- * @since 2023-02-02 16:58:56
+ * @since 2023-02-02 16:58:57
  */
 @Getter
 @Setter
 @Accessors(chain = true)
-@TableName("sys_login_log")
-public class SysLoginLog implements Serializable {
+@TableName("sys_user_role")
+public class SysUserRole implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 访问ID
+     * 主键id
      */
     @TableId("id")
     private Long id;
 
     /**
-     * 用户账号
+     * 角色id
      */
-    @TableField("username")
-    private String username;
+    @TableField("role_id")
+    private Long roleId;
 
     /**
-     * 登录IP地址
+     * 用户id
      */
-    @TableField("ipaddr")
-    private String ipaddr;
+    @TableField("user_id")
+    private Long userId;
 
     /**
-     * 登录状态（0成功 1失败）
+     * 创建时间
      */
-    @TableField("status")
-    private Boolean status;
-
-    /**
-     * 提示信息
-     */
-    @TableField("msg")
-    private String msg;
-
-    /**
-     * 访问时间
-     */
-    @TableField("access_time")
-    private Date accessTime;
-
     @TableField("create_time")
     private Date createTime;
 
+    /**
+     * 更新时间
+     */
     @TableField("update_time")
     private Date updateTime;
 

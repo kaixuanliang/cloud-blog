@@ -1,4 +1,4 @@
-package com.cloud.blog.common.base.entity;
+package com.cloud.blog.common.mybatis.entity.manage;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -12,68 +12,53 @@ import java.util.Date;
 
 /**
  * <p>
- * 组织机构
+ * 角色
  * </p>
  *
  * @author lkx
- * @since 2023-02-02 16:58:56
+ * @since 2023-02-02 16:58:57
  */
 @Getter
 @Setter
 @Accessors(chain = true)
-@TableName("sys_dept")
-public class SysDept implements Serializable {
+@TableName("sys_role")
+public class SysRole implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 角色id
+     */
     @TableId("id")
     private Long id;
 
     /**
-     * 部门名称
+     * 角色名称
      */
-    @TableField("name")
-    private String name;
+    @TableField("role_name")
+    private String roleName;
 
     /**
-     * 上级部门id
+     * 角色编码
      */
-    @TableField("parent_id")
-    private Long parentId;
+    @TableField("role_code")
+    private String roleCode;
 
     /**
-     * 树结构
+     * 描述
      */
-    @TableField("tree_path")
-    private String treePath;
+    @TableField("description")
+    private String description;
 
     /**
-     * 排序
+     * 创建时间
      */
-    @TableField("sort_value")
-    private Integer sortValue;
-
-    /**
-     * 负责人
-     */
-    @TableField("leader")
-    private String leader;
-
-    /**
-     * 电话
-     */
-    @TableField("phone")
-    private String phone;
-
-    /**
-     * 状态（1正常 0停用）
-     */
-    @TableField("status")
-    private Boolean status;
-
     @TableField("create_time")
     private Date createTime;
 
+    /**
+     * 更新时间
+     */
     @TableField("update_time")
     private Date updateTime;
 

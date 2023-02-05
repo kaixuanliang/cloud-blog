@@ -1,6 +1,6 @@
 package com.cloud.blog.producer.manage.service.impl;
 
-import com.cloud.blog.common.base.entity.SysLoginLog;
+import com.cloud.blog.common.mybatis.entity.manage.SysLoginLog;
 import com.cloud.blog.producer.manage.mapper.SysLoginLogMapper;
 import com.cloud.blog.producer.manage.service.SysLoginLogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
