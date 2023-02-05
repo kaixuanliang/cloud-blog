@@ -1,7 +1,9 @@
 package com.cloud.blog.common.base.trans;
 
 import com.cloud.blog.common.base.dto.manage.*;
+import com.cloud.blog.common.base.dto.query.SysRoleQueryDto;
 import com.cloud.blog.common.base.vo.manage.*;
+import com.cloud.blog.common.base.vo.query.SysRoleQueryVo;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -33,6 +35,8 @@ public interface VoTransDtoUtil {
     SysUserDto voTransDto(SysUserVo sysUserVo);
 
     SysUserRoleDto voTransDto(SysUserRoleVo sysUserRoleVo);
+
+    SysRoleQueryDto voTransDto(SysRoleQueryVo sysRoleQueryVo);
 
 
     List<SysDeptDto> deptListTransDto(List<SysDeptVo> list);

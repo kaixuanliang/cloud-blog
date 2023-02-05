@@ -1,9 +1,12 @@
 package com.cloud.blog.consumer.manage.service.impl;
 
 import com.cloud.blog.common.base.dto.manage.SysRoleDto;
+import com.cloud.blog.common.base.dto.query.SysRoleQueryDto;
 import com.cloud.blog.common.base.result.Result;
 import com.cloud.blog.common.base.trans.DtoTransVoUtil;
+import com.cloud.blog.common.base.trans.VoTransDtoUtil;
 import com.cloud.blog.common.base.vo.manage.SysRoleVo;
+import com.cloud.blog.common.base.vo.query.SysRoleQueryVo;
 import com.cloud.blog.consumer.manage.service.ManageConsumerService;
 import com.cloud.blog.consumer.manage.service.feign.ManageProducerFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,5 +38,11 @@ public class ManageConsumerServiceImpl implements ManageConsumerService {
     public Result<Boolean> removeRole(Long id) {
         Boolean result = manageProducerFeignService.removeRole(id);
         return Result.ok(result);
+    }
+
+    @Override
+    public Result findPageQueryRole(Long page, Long limit, SysRoleQueryVo sysRoleQueryVo) {
+        SysRoleQueryDto sysRoleQueryDto = VoTransDtoUtil.INSTANCE.voTransDto(sysRoleQueryVo);
+        return manageProducerFeignService.findPageQueryRole(page,limit,sysRoleQueryDto);
     }
 }

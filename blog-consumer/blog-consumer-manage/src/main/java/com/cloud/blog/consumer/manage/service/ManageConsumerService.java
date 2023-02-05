@@ -2,6 +2,7 @@ package com.cloud.blog.consumer.manage.service;
 
 import com.cloud.blog.common.base.result.Result;
 import com.cloud.blog.common.base.vo.manage.SysRoleVo;
+import com.cloud.blog.common.base.vo.query.SysRoleQueryVo;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,4 +19,6 @@ public interface ManageConsumerService {
     Result<List<SysRoleVo>> findAllRoleList();
 
     Result<Boolean> removeRole(Long id);
+
+    Result findPageQueryRole(Long page, Long limit, SysRoleQueryVo sysRoleQueryVo);
 }

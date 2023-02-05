@@ -1,6 +1,9 @@
 package com.cloud.blog.producer.manage.service.impl;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cloud.blog.common.base.dto.manage.SysRoleDto;
+import com.cloud.blog.common.base.dto.query.SysRoleQueryDto;
 import com.cloud.blog.common.mybatis.entity.manage.SysRole;
 import com.cloud.blog.common.mybatis.trans.EntityTransDtoUtil;
 import com.cloud.blog.producer.manage.mapper.SysRoleMapper;
@@ -35,5 +38,12 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> impl
     @Override
     public boolean removeRole(Long id) {
         return this.removeById(id);
+    }
+
+    @Override
+    public IPage<SysRole> findPageQueryRole(Long page, Long limit, SysRoleQueryDto sysRoleQueryDto) {
+        Page<SysRole> pageParam = new Page<>(page,limit);
+        IPage<SysRole> roleIPage = sysRoleMapper.findPageQueryRole(pageParam,sysRoleQueryDto);
+        return roleIPage;
     }
 }

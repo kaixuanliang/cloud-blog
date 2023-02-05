@@ -1,8 +1,12 @@
 package com.cloud.blog.producer.manage.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.cloud.blog.common.base.dto.query.SysRoleQueryDto;
 import com.cloud.blog.common.mybatis.entity.manage.SysRole;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
@@ -15,4 +19,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface SysRoleMapper extends BaseMapper<SysRole> {
 
+    IPage<SysRole> findPageQueryRole(Page<SysRole> pageParam, @Param("dto") SysRoleQueryDto sysRoleQueryDto);
 }

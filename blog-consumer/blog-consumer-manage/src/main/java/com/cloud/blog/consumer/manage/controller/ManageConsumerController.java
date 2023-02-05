@@ -1,7 +1,9 @@
 package com.cloud.blog.consumer.manage.controller;
 
+import com.cloud.blog.common.base.dto.query.SysRoleQueryDto;
 import com.cloud.blog.common.base.result.Result;
 import com.cloud.blog.common.base.vo.manage.SysRoleVo;
+import com.cloud.blog.common.base.vo.query.SysRoleQueryVo;
 import com.cloud.blog.consumer.manage.service.ManageConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -29,5 +31,10 @@ public class ManageConsumerController {
     @DeleteMapping("/removeRole/{id}")
     public Result<Boolean> removeRole(@PathVariable Long id){
         return manageConsumerService.removeRole(id);
+    }
+
+    @GetMapping("/findPageQueryRole/{page}/{limit}")
+    public Result findPageQueryRole(@PathVariable(value = "page") Long page, @PathVariable(value = "limit") Long limit, @RequestBody SysRoleQueryVo sysRoleQueryVo){
+        return manageConsumerService.findPageQueryRole(page,limit,sysRoleQueryVo);
     }
 }
