@@ -1,7 +1,9 @@
 package com.cloud.blog.producer.manage.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.cloud.blog.common.base.dto.manage.SysUserDto;
 import com.cloud.blog.common.mybatis.entity.manage.SysUser;
+import com.cloud.blog.common.mybatis.trans.EntityTransDtoUtil;
 import com.cloud.blog.producer.manage.mapper.SysUserMapper;
 import com.cloud.blog.producer.manage.service.SysUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -21,6 +23,10 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     @Autowired
     private SysUserMapper sysUserMapper;
     public SysUserDto queryByUsername(String username) {
-        return null;
+        QueryWrapper<SysUser> sysUserQueryWrapper = new QueryWrapper<>();
+        sysUserQueryWrapper.eq("username",username);
+        SysUser sysUser = sysUserMapper.selectOne(sysUserQueryWrapper);
+        SysUserDto sysUserDto = EntityTransDtoUtil.INSTANCE.entityTransDto(sysUser);
+        return sysUserDto;
     }
 }
