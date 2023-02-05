@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2023-02-02 15:56:22
  */
 @RestController
-@RequestMapping("/manage/sysOperLog")
+@RequestMapping("/producer/manage/sysOperLog")
 public class SysOperLogController {
 
 }

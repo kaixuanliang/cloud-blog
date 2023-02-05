@@ -12,7 +12,7 @@ import java.util.List;
  * @since: 2023/2/5 11:42
  * @description: dto转换成entity
  */
-@Mapper
+@Mapper(componentModel = "spring")
 public interface DtoTransEntityUtil {
     DtoTransEntityUtil INSTANCE = Mappers.getMapper(DtoTransEntityUtil.class);
 

@@ -12,7 +12,7 @@ import java.util.List;
  * @since: 2023/2/5 11:42
  * @description:entity转换成dto
  */
-@Mapper
+@Mapper(componentModel = "spring")
 public interface EntityTransDtoUtil {
     EntityTransDtoUtil INSTANCE = Mappers.getMapper(EntityTransDtoUtil.class);
 

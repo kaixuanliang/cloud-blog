@@ -2,6 +2,7 @@ package com.cloud.blog.common.mybatis.entity.manage;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;
 import lombok.Setter;
@@ -54,7 +55,7 @@ public class SysPost implements Serializable {
      * 状态（1正常 0停用）
      */
     @TableField("status")
-    private Boolean status;
+    private Integer status;
 
     @TableField("create_time")
     private Date createTime;
@@ -66,5 +67,6 @@ public class SysPost implements Serializable {
      * 删除标记（0:可用 1:已删除）
      */
     @TableField("is_deleted")
-    private Boolean isDeleted;
+    @TableLogic(value = "0",delval = "1")
+    private Integer isDeleted;
 }

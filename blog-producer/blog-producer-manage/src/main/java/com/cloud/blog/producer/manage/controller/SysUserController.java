@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2023-02-02 15:56:22
  */
 @RestController
-@RequestMapping("/manage/sysUser")
+@RequestMapping("/producer/manage/sysUser")
 public class SysUserController {
 
     @Autowired

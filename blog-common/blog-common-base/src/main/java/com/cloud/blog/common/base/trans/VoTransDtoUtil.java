@@ -12,7 +12,7 @@ import java.util.List;
  * @since: 2023/2/5 12:03
  * @description: vo转换成dto
  */
-@Mapper
+@Mapper(componentModel = "spring")
 public interface VoTransDtoUtil {
     VoTransDtoUtil INSTANCE = Mappers.getMapper(VoTransDtoUtil.class);
 
