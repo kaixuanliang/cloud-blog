@@ -70,7 +70,7 @@ public class SysUserDto implements Serializable {
     /**
      * 状态（1：正常 0：停用）
      */
-    private Boolean status;
+    private Integer status;
 
     /**
      * 创建时间
@@ -85,5 +85,5 @@ public class SysUserDto implements Serializable {
     /**
      * 删除标记（0:可用 1:已删除）
      */
-    private Boolean isDeleted;
+    private Integer isDeleted;
 }

@@ -41,7 +41,7 @@ public class SysLoginLogDto implements Serializable {
     /**
      * 登录状态（0成功 1失败）
      */
-    private Boolean status;
+    private Integer status;
 
     /**
      * 提示信息
@@ -60,5 +60,5 @@ public class SysLoginLogDto implements Serializable {
     /**
      * 删除标记（0:可用 1:已删除）
      */
-    private Boolean isDeleted;
+    private Integer isDeleted;
 }

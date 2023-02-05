@@ -50,5 +50,5 @@ public class SysUserRoleDto implements Serializable {
     /**
      * 删除标记（0:可用 1:已删除）
      */
-    private Boolean isDeleted;
+    private Integer isDeleted;
 }

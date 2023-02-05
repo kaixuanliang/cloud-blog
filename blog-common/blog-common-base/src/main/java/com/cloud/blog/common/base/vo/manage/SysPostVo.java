@@ -45,7 +45,7 @@ public class SysPostVo implements Serializable {
     /**
      * 状态（1正常 0停用）
      */
-    private Boolean status;
+    private Integer status;
 
     private Date createTime;
 
@@ -54,5 +54,5 @@ public class SysPostVo implements Serializable {
     /**
      * 删除标记（0:可用 1:已删除）
      */
-    private Boolean isDeleted;
+    private Integer isDeleted;
 }
